@@ -36,7 +36,7 @@
 
 ### Run Options / Варианты запуска
 
-* **1chessV2:** `python 1chessV2/build_brain.py`
+* **1chessV2:** `python build_brain.py`
 * **1chess v1:** `python screen_coach.py`
 
 ---
