@@ -1,33 +1,46 @@
 # 1chess
 
-**1chess** — лёгкий экранный шахматный помощник на Python с движком **Stockfish** и встроенной нейросетью (`numpy`), захватывающий позицию с экрана и рисующий подсказки в реальном времени.
+**1chess** is a lightweight Python screen-overlay chess assistant powered by **Stockfish** and a built-in neural network (`numpy`), designed to draw real-time move arrows without blocking mouse clicks.
 
-## Основные возможности и отличия версий
+**1chess** — лёгкий экранный шахматный помощник на Python с движком **Stockfish** и встроенной нейросетью (`numpy`), рисующий стрелки лучших ходов в реальном времени.
 
-* **1chessV2 (С любого хода):** использует нейросеть (`chess_brain.npz`) для распознавания миттельшпиля, эндшпиля и задач с любого хода, исключая путаницу при разных темах оформления. Поддерживает дообучение (`F2`) и сброс координат (`F3`).
-* **1chess v1 (Классическая):** калибруется по силуэтам 32 фигур при первом нажатии `\` строго на стартовой расстановке.
-* **Общие функции:** прозрачный оверлей с отображением лучшего (красного) и ответного (синего) ходов, синхронизация истории (рокировки, взятие на проходе) и глобальные горячие клавиши (`\` — анализ, `ESC` — выход).
+---
 
-## Установка и запуск
+## Versions Comparison / Отличия версий
 
-1. **ОС:** Windows 10/11. **Python:** 3.10+.
-2. **Установите библиотеки:**
+* **1chessV2 (AI From Any Move / Нейросеть с любого хода — Recommended):** Uses a pre-trained neural network (`chess_brain.npz`) for instant position recognition, skin training (`F2`), and coordinate reset (`F3`). / Использует нейросеть (`chess_brain.npz`) для мгновенного распознавания позиций, дообучения (`F2`) и сброса координат (`F3`).
+* **1chess v1 (Classic / Классическая версия):** Calibrates piece silhouettes on `\` strictly from the 32-piece starting position. / Калибруется по силуэтам 32 фигур при нажатии `\` со стартовой расстановки.
+
+---
+
+## Features & Hotkeys / Возможности и горячие клавиши
+
+* **Overlay / Оверлей:** Draws move arrows over the game window. / Рисует стрелки поверх окна игры.
+* **Hotkeys / Горячие клавиши:**
+  * `\` — Analyze current position / Выделить доску и проанализировать позицию.
+  * `F2` — Train neural network on a new skin (`1chessV2`) / Дообучить нейросеть (`1chessV2`).
+  * `F3` — Reset board coordinates (`1chessV2`) / Сбросить координаты доски (`1chessV2`).
+  * `ESC` — Exit program / Выход из программы.
+
+---
+
+## Requirements & Setup / Установка и запуск
+
+1. **OS / ОС:** Windows 10/11.
+2. **Python:** 3.10+.
+3. **Dependencies / Библиотеки:**
    ```bash
    pip install numpy pillow chess
    ```
-3. **Stockfish:** Скачайте Stockfish для Windows с [stockfishchess.org](https://stockfishchess.org) и поместите в папку `stockfish/` (файл `.nnue` должен быть рядом с `.exe`).
+4. **Stockfish:** Download from [stockfishchess.org](https://stockfishchess.org) and unpack into the `stockfish/` folder. / Скачайте с [stockfishchess.org](https://stockfishchess.org) и распакуйте в папку `stockfish/`.
 
-### Варианты запуска
+### Run Options / Варианты запуска
 
-* **Вариант 1 — 1chessV2 (Нейросеть с любого хода / Рекомендуется):**
-  ```bash
-  python 1chessV2/build_brain.py
-  ```
-* **Вариант 2 — 1chess v1 (Классическая версия со стартовой позиции):**
-  ```bash
-  python screen_coach.py
-  ```
+* **1chessV2:** `python 1chessV2/build_brain.py`
+* **1chess v1:** `python screen_coach.py`
 
-## Дисклеймер
+---
 
-Предназначено исключительно для обучения и разбора партий. Использование сторонних движков в рейтинговых онлайн-матчах нарушает правила платформ (Chess.com, Lichess и др.).
+## Disclaimer / Дисклеймер
+
+For educational purposes and playing against bots. Using chess engines in rated online games violates platform rules (Lichess, Chess.com). / Для обучения и игры против ботов. Использование движков в онлайн-матчах нарушает правила платформ (Lichess, Chess.com).
