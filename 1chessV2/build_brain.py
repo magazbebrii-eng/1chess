@@ -1,4 +1,4 @@
-import os
+ import os
 import glob
 import time
 import ctypes
@@ -18,8 +18,6 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 BOARDS_DIR = os.path.join(BASE_DIR, "boards")
 BRAIN_PATH = os.path.join(BASE_DIR, "chess_brain.npz")
 STOCKFISH_DIR = os.path.join(BASE_DIR, "stockfish")
-if not os.path.exists(STOCKFISH_DIR):
-    STOCKFISH_DIR = r"C:\Users\user\OneDrive\Desktop\stockfish"
 
 CLASSES = ["1", "P", "N", "B", "R", "Q", "K", "p", "n", "b", "r", "q", "k"]
 
