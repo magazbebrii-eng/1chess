@@ -25,7 +25,7 @@
 3. **Stockfish:** Download the Stockfish binary for Windows from [stockfishchess.org](https://stockfishchess.org) and set the folder path in `STOCKFISH_DIR` inside the script. / Скачайте Stockfish для Windows и укажите путь к папке с `.exe` в переменной `STOCKFISH_DIR`.
 4. **Run / Запуск:**
    ```bash
-   python 1chess.py
+   screen_coach.py
    ```
 
 ---
