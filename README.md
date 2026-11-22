@@ -28,11 +28,12 @@
 
 1. **OS / ОС:** Windows 10/11.
 2. **Python:** 3.10+.
-3. **Dependencies / Библиотеки:**
+3. **Обязательно, чтобы папка `stockfish` лежала в той же папке, что и сам скрипт (`build_brain.py`)!** / **Make sure the `stockfish` folder is located inside your project directory (in VS Code)!**
+4. **Dependencies / Библиотеки:**
    ```bash
    pip install numpy pillow chess
    ```
-4. **Stockfish:** Download from [stockfishchess.org](https://stockfishchess.org) and unpack into the `stockfish/` folder. / Скачайте с [stockfishchess.org](https://stockfishchess.org) и распакуйте в папку `stockfish/`.
+5. **Stockfish:** Download from [stockfishchess.org](https://stockfishchess.org) and unpack into the `stockfish/` folder. / Скачайте с [stockfishchess.org](https://stockfishchess.org) и распакуйте в папку `stockfish/`.
 
 ### Run Options / Варианты запуска
 
